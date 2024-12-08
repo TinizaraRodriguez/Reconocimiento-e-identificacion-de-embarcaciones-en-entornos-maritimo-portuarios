@@ -4,7 +4,7 @@ import torch
 import os
 import sys
 
-sys.path.append(os.path.abspath("/OCR/MixNet"))
+sys.path.append(os.path.abspath("/MixNet"))
 from network.textnet import TextNet
 from cfglib.config import config as cfg, update_config
 from util.misc import rescale_result_bbox

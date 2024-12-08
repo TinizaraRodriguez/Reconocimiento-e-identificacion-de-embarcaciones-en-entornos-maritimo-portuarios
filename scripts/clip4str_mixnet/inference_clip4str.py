@@ -6,7 +6,7 @@ import torch
 from PIL import Image
 import numpy as np
 
-sys.path.append(os.path.abspath("/OCR/CLIP4STR"))
+sys.path.append(os.path.abspath("/CLIP4STR"))
 from strhub.data.module import SceneTextDataModule
 from strhub.models.utils import load_from_checkpoint
 sys.path.pop(-1)
