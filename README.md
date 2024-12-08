@@ -9,18 +9,18 @@ The main objective of the project is to implement and evaluate different algorit
   <li style="list-style-type: none;"><strong></strong><a href="#2">Getting Started</a></li>
   <li style="list-style-type: none;"><strong></strong><a href="#3">Files structure</a></li>
   <li style="list-style-type: none;"><strong></strong><a href="#4">Installing</a></li>
-  <li style="list-style-type: none;"><strong></strong><a href="#4">Built with</a></li>
-  <li style="list-style-type: none;"><strong></strong><a href="#4">Authors</a></li
-  <li style="list-style-type: none;"><strong></strong><a href="#4">Supervisors</a></li>
-  <li style="list-style-type: none;"><strong></strong><a href="#4">License</a></li>
-  <li style="list-style-type: none;"><strong></strong><a href="#4">Contact</a></li>
+  <li style="list-style-type: none;"><strong></strong><a href="#5">Built with</a></li>
+  <li style="list-style-type: none;"><strong></strong><a href="#6">Authors</a></li
+  <li style="list-style-type: none;"><strong></strong><a href="#7">Supervisors</a></li>
+  <li style="list-style-type: none;"><strong></strong><a href="#8">License</a></li>
+  <li style="list-style-type: none;"><strong></strong><a href="#9">Contact</a></li>
 </ul>
 
 
-## Getting Started
+## Getting Started <div id="2" />
 
 
-### Files structure
+### Files structure <div id="3" />
 
 - **Dockerfiles/**: Contains the Dockerfiles needed to build the two containers used to test the algorithms.
 - **Dataset/**: Includes the dataset categorised by image type, used to run and analyse each algorithm.
@@ -29,10 +29,10 @@ The main objective of the project is to implement and evaluate different algorit
 - **Models_Directory/**: Directory for the model utilities needed for the execution of the scripts.
 
 
-### Installing
+### Installing <div id="4" />
 
 
-### Built With
+### Built With <div id="5" />
 
 * [PaddleOCR](https://github.com/PaddlePaddle/PaddleOCR)
 * [EasyOCR](https://github.com/JaidedAI/EasyOCR)
@@ -42,20 +42,20 @@ The main objective of the project is to implement and evaluate different algorit
 * [Clip4STR](https://github.com/VamosC/CLIP4STR) 
 
 
-## Authors
+## Authors <div id="6" />
 
 * **Tinizara María Rodríguez Delgado**
 
 
-## Supervisors
+## Supervisors <div id="7" />
 * **Nelson Monzón López**
 * **Jonay Suárez Ramírez**
 * **Leopoldo López Reverón**
 
-## License
+## License <div id="8" />
 This software is proprietary and confidential. Unauthorized copying of this file, via any medium, is strictly prohibited. All rights reserved.
 
-## Contact
+## Contact <div id="9" />
 For further information, contact via email:
 
 Tinizara María Rodríguez Delgado: tinizara.rodriguez101@alu.ulpgc.es
