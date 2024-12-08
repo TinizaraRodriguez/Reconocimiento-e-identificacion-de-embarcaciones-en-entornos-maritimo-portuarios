@@ -22,7 +22,7 @@ The main objective of the project is to implement and evaluate different algorit
 
 ### Files structure <div id="3" />
 
-- **Dockerfiles/**: Contains the Dockerfiles needed to build the two containers used to test the algorithms.
+- **Dockerfiles/**: Contains the Dockerfiles needed to build the one of the container used to test the algorithms: PaddleOCR, EasyOCR, PyTesseract.
 - **Dataset/**: Includes the dataset categorised by image type, used to run and analyse each algorithm.
 - **Scripts/**: Folder with the scripts needed to implement and run the different models.
 - **Checkpoints/**: Stores the checkpoints for MixNet and Clip4str necessary for the correct execution.
