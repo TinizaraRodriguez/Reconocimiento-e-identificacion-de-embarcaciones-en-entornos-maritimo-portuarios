@@ -30,6 +30,17 @@ The main objective of the project is to implement and evaluate different algorit
 
 
 ### Installing <div id="4" />
+To install KerasOCR, we start from a Tensorflow Docker image in order to avoid possible version dependency problems. To do this, we should execute the following command: 
+
+ ```docker pull tensorflow/tensorflow```
+
+This will download the Tensorflow image. To install it and run the container, run the following command:
+
+ ``` docker run -d -p 8023:8023 --gpus all --shm-size=8g -it [image_name] --name [container_name]```
+
+It is recommended to mount a bind mount in order to be able to visualise the results without the need to deploy an apache server, and for that you should execute this command: 
+
+   ```docker run -d -p 8026:8026 --gpus all --shm-size=8g -it --runtime=nvidia --volume [host_folder]:[contain_folder] [image_name] --name [container_name]```
 
 
 ### Built With <div id="5" />
