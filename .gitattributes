@@ -3,5 +3,7 @@
 *.png filter=lfs diff=lfs merge=lfs -text
 *.json filter=lfs diff=lfs merge=lfs -text
 *.txt filter=lfs diff=lfs merge=lfs -text
+*.pth filter=lfs diff=lfs merge=lfs -text
+*.ckpt filter=lfs diff=lfs merge=lfs -text
 Checkpoints/MixNet/MixNet_FSNet_M_622.pth filter=lfs diff=lfs merge=lfs -text
 Checkpoints/Clip4STR/clip4str_base16x16_d70bde1f2d.ckpt filter=lfs diff=lfs merge=lfs -text
