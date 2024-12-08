@@ -26,6 +26,7 @@ The main objective of the project is to implement and evaluate different algorit
 - **Dataset/**: Includes the dataset categorised by image type, used to run and analyse each algorithm.
 - **Scripts/**: Folder with the scripts needed to implement and run the different models.
 - **Checkpoints/**: Stores the checkpoints for MixNet and Clip4str necessary for the correct execution.
+- **Models_Directory/**: Directory for the model utilities needed for the execution of the scripts.
 
 
 ### Installing
