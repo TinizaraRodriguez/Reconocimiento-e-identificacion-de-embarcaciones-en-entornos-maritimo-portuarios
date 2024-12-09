@@ -1,5 +1,10 @@
 # Reconocimiento e identificación de embarcaciones en entornos maritimos-portuarios
 
+<p align="center">
+  <img src="./demo/demo.png" alt="img_demo" width="50%">
+</p>
+
+
 This repository contains the code, resources and tools necessary for the development and execution of the project: ‘Reconocimiento e identificación de embarcaciones en entornos maritimos-portuarios’ presented at the University of Las Palmas de Gran Canaria (ULPGC).
 The main objective of the project is to implement and evaluate different algorithms that allow the accurate identification of ship registration using OCR technology.
 
