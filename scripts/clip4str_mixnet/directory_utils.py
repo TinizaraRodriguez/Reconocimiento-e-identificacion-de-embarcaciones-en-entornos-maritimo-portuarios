@@ -2,7 +2,7 @@ import os
 import cv2
 import magic 
 import re
-
+from analyzed_plates import analyzed_plates
 
 def checkDirectory(directory, create_dir=False):
     if os.path.isdir(directory):
@@ -33,7 +33,6 @@ def searchImages(directory):
     return imgs
 
 
-
 def merge_texts(input_file, output_file):
     merged_lines = {}
 
@@ -49,23 +48,38 @@ def merge_texts(input_file, output_file):
             # Modificar el texto según el patrón especificado
             modified_text = modify_text(text)
 
+            # Comprobar si es una matrícula y a qué país se corresponde
+            plate_info = analyzed_plates(modified_text)
+
             # si las coordenadas ya existen en el diccionario, fusionar los datos
             if coordinates in merged_lines:
                 merged_lines[coordinates]['texts'].append(modified_text)
                 merged_lines[coordinates]['total_confidence'] += confidence
                 merged_lines[coordinates]['count'] += 1
+                merged_lines[coordinates]['plate_info'].append(plate_info)  # Añadir la información de la matrícula
             else:
                 # si las coordenadas son nuevas, crear una nueva entrada en el diccionario
-                merged_lines[coordinates] = {'texts': [modified_text], 'total_confidence': confidence, 'count': 1}
+                merged_lines[coordinates] = {
+                    'texts': [modified_text], 
+                    'total_confidence': confidence, 
+                    'count': 1,
+                    'plate_info': [plate_info]  # Guardar la información de la matrícula
+                }
 
-    # escribir el resultado fusionado en el archivo de salida
+    # Escribir el resultado fusionado en el archivo de salida
     with open(output_file, 'w') as f:
         for coordinates, data in merged_lines.items():
-            # calcular el promedio de la confianza
+            # Calcular el promedio de la confianza
             average_confidence = data['total_confidence'] / data['count']
             f.write(f'Texto detectado: {" ".join(data["texts"])}\n')
             f.write(f'Confianza: {average_confidence}\n')
-            f.write(f'Coordenadas: {coordinates}\n\n')
+            f.write(f'Coordenadas: {coordinates}\n')
+            
+            # Escribir la información de la matrícula (país, formato, estado)
+            for plate_info in data['plate_info']:
+                for info in plate_info:
+                    f.write(f'País: {info["country"]}, Formato: {info["format"]}, Estado: {info["state"]}\n')
+            f.write("\n")
 
 
 def modify_text(text):
@@ -92,6 +106,7 @@ def modify_text(text):
             modified_text = f"{modified_first}{second_group[1:]}"
         else:
             modified_text = f"{first_group}\u00AA{second_group[1:]}"
+
         return modified_text
     elif match_imo:
         modified_text=re.sub(pattern_imo, r'\1 \2',text)
@@ -109,9 +124,4 @@ def search_text_dir(root_directory):
                     for filename in os.listdir(text_file_path):
                         if filename.endswith(".txt"):
                             txt_file_path = os.path.join(text_file_path, filename)
-                            merge_texts(txt_file_path, txt_file_path)  
-
-
-
-
-
+                            merge_texts(txt_file_path, txt_file_path)
