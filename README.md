@@ -22,11 +22,28 @@ The main objective of the project is to implement and evaluate different algorit
 
 ### Files structure <div id="3" />
 
-- **Dockerfiles/**: Contains the Dockerfiles needed to build the one of the container used to test the algorithms: PaddleOCR, EasyOCR, PyTesseract.
-- **Dataset/**: Includes the dataset categorised by image type, used to run and analyse each algorithm.
-- **Scripts/**: Folder with the scripts needed to implement and run the different models.
-- **Checkpoints/**: Stores the checkpoints for MixNet and Clip4str necessary for the correct execution.
-- **Models_Directory/**: Directory for the model utilities needed for the execution of the scripts.
+- [**Checkpoints/**](https://github.com/TinizaraRodriguez/Reconocimiento-e-identificacion-de-embarcaciones-en-entornos-maritimo-portuarios/tree/main/Checkpoints): Stores the checkpoints for MixNet and Clip4str necessary for the correct execution.
+    - [**Clip4STR/**](https://github.com/TinizaraRodriguez/Reconocimiento-e-identificacion-de-embarcaciones-en-entornos-maritimo-portuarios/tree/main/Checkpoints/Clip4STR): directory where the Clip4STR checkpoint file is stored
+    - [**MixNet/**](https://github.com/TinizaraRodriguez/Reconocimiento-e-identificacion-de-embarcaciones-en-entornos-maritimo-portuarios/tree/main/Checkpoints/MixNet): directory where the Mixnet pth file is stored
+- [**Dockerfiles/**](https://github.com/TinizaraRodriguez/Reconocimiento-e-identificacion-de-embarcaciones-en-entornos-maritimo-portuarios/tree/main/Dockerfiles): Contains the Dockerfiles needed to build the one of the container used to test the algorithms: PaddleOCR, EasyOCR, PyTesseract.
+- [**Models_Directory/**](https://github.com/TinizaraRodriguez/Reconocimiento-e-identificacion-de-embarcaciones-en-entornos-maritimo-portuarios/tree/main/Models_Directory): Directory for the model utilities needed for the execution of the scripts.
+- [**Dataset/**](https://github.com/TinizaraRodriguez/Reconocimiento-e-identificacion-de-embarcaciones-en-entornos-maritimo-portuarios/tree/main/dataset): Includes the dataset categorised by image type, used to run and analyse each algorithm.
+    - [**barcos_grandes/**](https://github.com/TinizaraRodriguez/Reconocimiento-e-identificacion-de-embarcaciones-en-entornos-maritimo-portuarios/tree/main/dataset/barcos_grandes): Images of boats over 21 metres in length
+    - [**barcos_pequenos/**](https://github.com/TinizaraRodriguez/Reconocimiento-e-identificacion-de-embarcaciones-en-entornos-maritimo-portuarios/tree/main/dataset/barcos_pequenos): Images of boats less than 21 metres in length
+    - [**cargueros/**](https://github.com/TinizaraRodriguez/Reconocimiento-e-identificacion-de-embarcaciones-en-entornos-maritimo-portuarios/tree/main/dataset/cargueros): Images of vessels used for the transport of goods internationally.
+    - [**condiciones_adversas/**](https://github.com/TinizaraRodriguez/Reconocimiento-e-identificacion-de-embarcaciones-en-entornos-maritimo-portuarios/tree/main/dataset/condiciones_adversas): Images where the weather conditions are bad. There are also low quality images.
+    - [**distancia_corta/**](https://github.com/TinizaraRodriguez/Reconocimiento-e-identificacion-de-embarcaciones-en-entornos-maritimo-portuarios/tree/main/dataset/distancia_corta): Images in which both the vessel and the texts can be seen without the need for zooming by the camera or post-processing.
+    - [**distancia_larga/**](https://github.com/TinizaraRodriguez/Reconocimiento-e-identificacion-de-embarcaciones-en-entornos-maritimo-portuarios/tree/main/dataset/distancia_larga): Images where the text is negligible and it is necessary to perform some kind of treatment on them.
+    - [**gt_cvat/**](https://github.com/TinizaraRodriguez/Reconocimiento-e-identificacion-de-embarcaciones-en-entornos-maritimo-portuarios/tree/main/dataset/gt_cvat): 
+    - [**noche/**](https://github.com/TinizaraRodriguez/Reconocimiento-e-identificacion-de-embarcaciones-en-entornos-maritimo-portuarios/tree/main/dataset/noche): Night or low light images.
+    - [**gt_dataset.json**](https://github.com/TinizaraRodriguez/Reconocimiento-e-identificacion-de-embarcaciones-en-entornos-maritimo-portuarios/blob/main/dataset/gt_dataset.json): Json file used as ground truth in the execution of the models.
+- [**Scripts/**](https://github.com/TinizaraRodriguez/Reconocimiento-e-identificacion-de-embarcaciones-en-entornos-maritimo-portuarios/tree/main/scripts): Folder with the directories of each models needed to implement and run the different algorithms.
+    - [**PyTesseractOCR/**](https://github.com/TinizaraRodriguez/Reconocimiento-e-identificacion-de-embarcaciones-en-entornos-maritimo-portuarios/tree/main/scripts/PyTesseractOCR)
+    - [**clip4str_mixnet/**](https://github.com/TinizaraRodriguez/Reconocimiento-e-identificacion-de-embarcaciones-en-entornos-maritimo-portuarios/tree/main/scripts/clip4str_mixnet)
+    - [**easyOCR/**](https://github.com/TinizaraRodriguez/Reconocimiento-e-identificacion-de-embarcaciones-en-entornos-maritimo-portuarios/tree/main/scripts/easyOCR)
+    - [**kerasOCR/**](https://github.com/TinizaraRodriguez/Reconocimiento-e-identificacion-de-embarcaciones-en-entornos-maritimo-portuarios/tree/main/scripts/kerasOCR)
+    - [**paddleOCR/**](https://github.com/TinizaraRodriguez/Reconocimiento-e-identificacion-de-embarcaciones-en-entornos-maritimo-portuarios/tree/main/scripts/paddleOCR)
+
 
 
 ### Installing <div id="4" />
