@@ -1,7 +1,7 @@
 # Reconocimiento e identificación de embarcaciones en entornos maritimos-portuarios
 
 <p align="center">
-  <img src="./demo/demo.png" alt="img_demo" width="50%">
+  <img src="./Demo/img_demo.jpeg" alt="img_demo" width="50%">
 </p>
 
 
